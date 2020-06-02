@@ -75,7 +75,7 @@ server.put('/users/:id', (req, res) => {
     if (changes.name === undefined || changes.bio === undefined) {
         res.status(400).json({ errorMessage: "Please provide name and bio for the user." })
     } else {
-        res.send()
+        res.status(200).json(...users, changes)
     }
 })
 
